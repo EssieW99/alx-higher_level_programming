@@ -1,4 +1,5 @@
 #!/usr/bin/pyhton3
+# 100-weight_average.py
 def weight_average(my_list=[]):
     total = 0
     total_weight = 0
