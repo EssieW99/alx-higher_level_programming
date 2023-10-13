@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 # 100-weight_average.py
 def weight_average(my_list=[]):
     total = 0
