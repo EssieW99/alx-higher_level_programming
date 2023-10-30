@@ -24,12 +24,12 @@ class Square:
         self.__size = value
 
     @property
-    def size(self):
+    def position(self):
         """Retrieves the position of the square."""
         return self.__position
 
     @size.setter
-    def size(self, value):
+    def position(self, value):
         """Sets the position with the value and type validation."""
         if (
             not isinstance(value, tuple) or
