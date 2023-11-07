@@ -4,4 +4,4 @@
 
 def area(self):
     """that raises an Exception with a message"""
-    raise Exception("area() is not implemented")
+    raise Exception ("area() is not implemented")
