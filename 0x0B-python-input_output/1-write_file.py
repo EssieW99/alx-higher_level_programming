@@ -1,9 +1,15 @@
 #!/usr/bin/python3
+"""defines a file reading function"""
 
 def write_file(filename="", text=""):
-    try:
-        with open(filename, 'a', encoding='utf-8') as file:
-            no_chars = file.write(text)
-        return no_chars
-    except Exception as e:
-        print("An error occurred: {}".format(e))
+    """writes a string to a text file.
+
+    Args:
+    filenema: name of file
+    text: string to be wriiten to the file
+
+    Returns:
+    No. of characters written.
+    """
+    with open(filename, 'a', encoding='utf-8') as file:
+        return file.write(text)
