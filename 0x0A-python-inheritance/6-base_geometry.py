@@ -2,6 +2,8 @@
 """defines a base geometry class"""
 
 
-def area(self):
-    """that raises an Exception with a message"""
-    raise Exception ("area() is not implemented")
+class BaseGeometry:
+    """represents a bse geometry"""
+    def area(self):
+        """that raises an Exception with a message"""
+        raise Exception("area() is not implemented")
