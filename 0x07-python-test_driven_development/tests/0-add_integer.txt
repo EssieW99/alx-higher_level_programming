@@ -1,0 +1,55 @@
+Test for 0-add_integer.py
+-------------------------------
+This function returns the integer value of two arguments
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(2, 3)
+5
+>>> add_integer(5, -2)
+3
+
+Function should work with float numbers 
+>>> add_integer(2.0, 4.0)
+6
+>>> add_integer(6.5, 9.5)
+15
+>>> add_integer(3, -5)
+-2
+
+If no second number is given, it becomes 98 by default
+>>> add_integer(10)
+108
+
+Non-Numbers
+-----------
+The function only accepts integers or floats as arguments
+If an argument is either two, a TypeError is raised
+
+>>> add_integer("World", 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2, "World")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+If both arguments aren't floats or integers,
+a TypeError is only raised for the first argument
+
+>>> add_integer("Hello", "World")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+If a float overflow is given, an error is raised
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+The same applies to NaN numbers
+
+>>> add_integer(2, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
