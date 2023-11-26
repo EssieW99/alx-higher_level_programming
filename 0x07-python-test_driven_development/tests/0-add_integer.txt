@@ -51,4 +51,4 @@ OverflowError: cannot convert float infinity to integer
 
 >>> add_integer(4, float('inf'))
 Traceback (most recent call last):
-OverflowError: cannot convert float infinity to integerOverflowError: cannot convert float infinity to integer
+OverflowError: cannot convert float infinity to integer
