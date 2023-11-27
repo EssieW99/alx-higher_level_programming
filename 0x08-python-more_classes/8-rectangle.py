@@ -16,7 +16,7 @@ class Rectangle:
         height(int): the rectangle's height
         """
         self.width = width
-        sellf.height = height
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
