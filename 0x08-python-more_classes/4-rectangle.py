@@ -66,5 +66,5 @@ class Rectangle:
         """returns a string representation
         of the rectangle for eval()
         """
-        string = print("Rectangle({},{})".format(self.width, self.height))
+        string = print("Rectangle({}, {})".format(self.width, self.height))
         return string
