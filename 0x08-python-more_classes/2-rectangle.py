@@ -34,8 +34,8 @@ class Rectangle:
         """the getter method for the height property"""
         return self.__height
 
-    @width.setter
-    def height(self, width=0, height=0):
+    @height.setter
+    def height(self, value):
         """the setter method for the height property"""
         if is not isinstance(value, int):
             raise TypeError("height must be an integer")
