@@ -16,7 +16,6 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-
         type(self).number_instances += 1
 
     @property
