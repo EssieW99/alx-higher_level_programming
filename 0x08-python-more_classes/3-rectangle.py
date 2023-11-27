@@ -57,5 +57,7 @@ class Rectangle:
         """returns a string representattion of the rectangle"""
         if self.width == 0 or self.height == 0:
             return ("")
+        rec_str = ""
         for _ in range(self.height):
-            return ("#" * self.width)
+            rec_str += "#" * self.width
+        return rec_str
