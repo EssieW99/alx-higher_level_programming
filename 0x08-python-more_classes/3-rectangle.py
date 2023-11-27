@@ -59,5 +59,5 @@ class Rectangle:
             return ("")
         rec_str = ""
         for _ in range(self.height):
-            rec_str += "#" * self.width
-        return rec_str
+            rec_str += "#" * self.width + '\n'
+        return rec_str.rstrip()
