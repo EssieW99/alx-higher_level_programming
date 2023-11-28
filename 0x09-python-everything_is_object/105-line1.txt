@@ -1,2 +1,1 @@
-261
-small integers in the range of -5 and 256 are cached and reused in CPython
+0
