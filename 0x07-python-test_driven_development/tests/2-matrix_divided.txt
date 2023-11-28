@@ -1,0 +1,58 @@
+Testing the '2-matrix_divided' module
+_____________________________________
+
+Import the function
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test for a simple matrix
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+>>> matrix_divided([[7, 8, 9], [10, 11, 12]], 1.5)
+[[4.67, 5.33, 6.0], [6.67, 7.33, 8.0]]
+>>> matrix_divided([[1.4, 2.2, 3.6], [4.4, 5.8, 6.0]], 2.0)
+[[0.7, 1.1, 1.8], [2.2, 2.9, 3.0]]
+
+Test for no arguments
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test for zero div
+>>> matrix_divided([[1, 9, 7], [4, 22, 5]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Test for negative div
+>>> matrix_divided([[3, 8, 1], [1, 4, 6]], -4)
+[[-0.75, -2.0, -0.25], [-0.25, -1.0, -1.5]]
+
+Test for non int/float div
+>>> matrix_divided([[3, 1, 6], [2, 9, 4]], dog)
+Traceback (most recent call last):
+NameError: name 'dog' is not defined
+>>> matrix_divided([[6, 1, 2], [9, 2, 1]], "mine")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Test for NaN div
+>>> matrix_divided([[1, 9, 2], [6, 4, 3]], float('nan'))
+[[nan, nan, nan], [nan, nan, nan]]
+
+Test for infinity div
+>>> matrix_divided([[2, 3, 1], [6, 8, 4]], float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test for unequal size for rows
+>>> matrix_divided([[2, 1, 0], [4, 5]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Test for empty matrix
+>>> matrix_divided([[]], 4)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test for list with non int or float
+>>> matrix_divided([[3, "ice", 4], [2, 7, 5]], 6)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
