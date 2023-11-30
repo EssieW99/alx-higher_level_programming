@@ -5,18 +5,29 @@ Import the module
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Testing with basic text
->>> text_indentation("My.Name.Is?")
+>>> text_indentation("My. Name. Is: Coal?")
 My
 <BLANKLINE>
-Name
+ Name
 <BLANKLINE>
-Is
+ Is
+<BLANKLINE>
+ Coal
 <BLANKLINE>
 <BLANKLINE>
+
 >>> text_indentation("Car: Audi")
 Car
 <BLANKLINE>
  Audi
+>>> text_indentation("Esther. Wanjiku")
+Esther
+<BLANKLINE>
+ Wanjiku
+>>> text_indentation("Esther.Wanjiku")
+Esther
+<BLANKLINE>
+Wanjiku
 
 Test for no delimeters
 >>> text_indentation("Esther Wanjiku")
