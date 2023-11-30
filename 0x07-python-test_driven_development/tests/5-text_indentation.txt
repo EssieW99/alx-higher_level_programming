@@ -1,0 +1,50 @@
+Testing the 5-text_indentation module
+______________________________________
+
+Import the module
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Testing with basic text
+>>> text_indentation("My.Name.Is?")
+My
+<BLANKLINE>
+Name
+<BLANKLINE>
+Is
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indentation("Car: Audi")
+Car
+<BLANKLINE>
+ Audi
+
+Test for no delimeters
+>>> text_indentation("Esther Wanjiku")
+Esther Wanjiku
+
+Test for no argument
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test with empty string
+>>> text_indentation("")
+<BLANKLINE>
+>>> text_indentation("  ")
+<BLANKLINE>
+
+Test with delimeters with spaces
+>>> text_indentation(".  :  ?")
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+
+Test with non string
+>>> text_indentation(69)
+Traceback (most recent call last):
+TypeError: text must be a string
+
