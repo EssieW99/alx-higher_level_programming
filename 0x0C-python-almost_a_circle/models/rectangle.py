@@ -93,7 +93,7 @@ class Rectangle(Base):
         for _ in range(self.__height):
             rect += ((" " * self.__x + "#" * self.__width) + '\n')
         rect.rstrip()
-        print(rect)
+        print(rect, end="")
 
     def __str__(self):
         """returns a string representation of the rectangle"""
