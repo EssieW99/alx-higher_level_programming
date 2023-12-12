@@ -16,10 +16,10 @@ class Rectangle(Base):
         y(int): the rectangle's y coordinates
         id(int): the rectangle's id
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -44,7 +44,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """getter method for the height property"""
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
