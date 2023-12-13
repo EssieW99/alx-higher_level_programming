@@ -38,3 +38,6 @@ class Test_to_json_string(unittest.TestCase):
 
     def test_for_None(self):
         self.assertEqual("[]", Base.to_json_string(None))
+
+if __name__ == "__main__":
+    unittest.main()
