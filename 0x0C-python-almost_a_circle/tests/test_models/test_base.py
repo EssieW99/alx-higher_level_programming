@@ -4,7 +4,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 import unittest
-
+import os
 
 class Test_id_instantiation(unittest.TestCase):
     """tests for instantiation of the base class"""
