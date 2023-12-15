@@ -34,12 +34,24 @@ class Test_id_instantiation(unittest.TestCase):
         case1 = Base(6.7)
         self.assertEqual(case1.id, 6.7)
 
+    def test_range(self):
+        self.assertEqual(range(3), Base(range(3)).id)
+
+    def test_bool(self):
+        self.assertEqual(True, Base(True).id)
+
+    def test_list(self):
+        self.assertEqual([5, 2, 7, 1], Base([5, 2, 7, 1]).id) 
+
 
 class Test_to_json_string(unittest.TestCase):
     """tests for to_json_string method of the base class"""
 
     def test_for_None(self):
         self.assertEqual("[]", Base.to_json_string(None))
+
+    def test_empty_list(self):
+        self.assertEqual("[]", Base.to_json_string([]))
 
     def test_a_rectangle(self):
         rect = Rectangle(10, 7, 2, 8, 2)
