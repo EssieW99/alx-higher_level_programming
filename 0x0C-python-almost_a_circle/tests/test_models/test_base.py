@@ -6,6 +6,7 @@ from models.square import Square
 import unittest
 import os
 
+
 class Test_id_instantiation(unittest.TestCase):
     """tests for instantiation of the base class"""
 
@@ -33,11 +34,20 @@ class Test_id_instantiation(unittest.TestCase):
         case1 = Base(6.7)
         self.assertEqual(case1.id, 6.7)
 
+
 class Test_to_json_string(unittest.TestCase):
     """tests for to_json_string method of the base class"""
 
     def test_for_None(self):
         self.assertEqual("[]", Base.to_json_string(None))
+
+    def test_a_rectangle(self):
+        rect = Rectangle(10, 7, 2, 8, 2)
+        self.assertEqual(str, type(Base.to_json_string(rect.to_dictionary())))
+
+    def test_a_square(self):
+        sq = Square(10, 2, 1, 3)
+        self.assertEqual(str, type(Base.to_json_string(sq.to_dictionary())))
 
 if __name__ == "__main__":
     unittest.main()
