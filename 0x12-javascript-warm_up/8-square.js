@@ -12,7 +12,7 @@ let j = 0;
 for (i = 0; i < firstArg; i++) {
   let row = '';
   for (j = 0; j < firstArg; j++) {
-    row += 'x';
+    row += 'X';
   }
   console.log(row);
 }
