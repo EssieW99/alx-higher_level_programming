@@ -9,4 +9,4 @@ const firstFile = fs.readFileSync(process.argv[2]).toString();
 const secFile = fs.readFileSync(process.argv[3]).toString();
 
 // write contents into file three
-fs.writeFileSync(process.argv[4], firstFile + '\n' + secFile + '\n');
+fs.writeFileSync(process.argv[4], firstFile + secFile);
