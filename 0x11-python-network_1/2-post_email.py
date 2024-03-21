@@ -10,7 +10,7 @@ import sys
 
 if __name__ == "__main__":
     link = sys.argv[1]
-    value = {'email': sys.argv[2]}
+    value = {"email": sys.argv[2]}
     # produces a string to be sent in the POST request
     data = urllib.parse.urlencode(value)
     # data ought to be in bytes
