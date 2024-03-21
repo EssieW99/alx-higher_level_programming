@@ -20,5 +20,5 @@ if __name__ == "__main__":
     # opens the file-like object rep. the response
     with urllib.request.urlopen(req) as response:
         page = response.read()
-    # print the body of the response
-    print(page.decode('utf-8'))
+        # print the body of the response
+        print(page.decode('utf-8'))
