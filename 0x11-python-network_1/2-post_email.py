@@ -14,9 +14,9 @@ if __name__ == "__main__":
     # produces a string to be sent in the POST request
     data = urllib.parse.urlencode(value)
     # data ought to be in bytes
-    data = data.encode('utf-8')
+    p_data = data.encode('utf-8')
     # create a Request object with the URL obtained
-    req = urllib.request.Request(link, data)
+    req = urllib.request.Request(link, data=p_data)
     # opens the file-like object rep. the response
     with urllib.request.urlopen(req) as response:
         page = response.read()
