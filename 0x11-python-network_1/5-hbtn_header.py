@@ -11,5 +11,5 @@ if __name__ == "__main__":
     r = requests.get(sys.argv[1])
     r.raise_for_status()
 
-    id = r.headers['X-Request-Id']
+    id = r.headers.get('X-Request-Id')
     print(id)
