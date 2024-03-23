@@ -7,6 +7,7 @@ import requests
 
 if __name__ == "__main__":
     r = requests.get('https://alx-intranet.hbtn.io/status')
+    # check if response status is OK
     r.raise_for_status()
 
     print("Body response:")
